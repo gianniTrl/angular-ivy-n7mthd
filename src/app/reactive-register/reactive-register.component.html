@@ -1,0 +1,14 @@
+<form [formGroup]="userForm">
+  NAME <input type="text" name="username" formControlName="name" />
+  <hr />
+  EMAIL <input type="text" name="useremail" formControlName="email" />
+  <hr />
+  PASSWORD
+  <input type="text" name="userpassword" formControlName="password" />
+  <hr />
+  I accept the T&C<input type="checkbox" formControlName="terms" />
+  <hr />
+  <button (click)="onFormSubmit()" [disabled]="userForm.invalid">
+    Register
+  </button>
+</form>

@@ -1,0 +1,25 @@
+<div class="holder">
+  <table width="100%" *ngIf="paneVisibility">
+    <tr>
+      <td>
+        {{ currentLanguage }} -
+
+        <span [ngSwitch]="currentLanguage">
+          <!-- the same view can be shown in more than one case -->
+          <span *ngSwitchCase="Lang.IT">{{ greetings[Lang.IT] }}</span>
+          <span *ngSwitchCase="Lang.EN">{{ greetings[Lang.EN] }}</span>
+          <span *ngSwitchCase="Lang.ES">{{ greetings[Lang.ES] }}</span>
+          <!--default case when there are no matches -->
+          <span *ngSwitchDefault>{{ greetings[Lang.IT] }}</span>
+        </span>
+      </td>
+      <td>
+        <p *ngFor="let item of langs; index as i">
+          <button (click)="onLanguageSelect(item)">{{ item }}</button>
+        </p>
+      </td>
+    </tr>
+  </table>
+
+  <button (click)="onPaneVisibilityToggle()">Show/Hide</button>
+</div>

@@ -1,0 +1,13 @@
+<div *ngIf="!loaded">Loading...</div>
+
+<form [formGroup]="postForm" *ngIf="loaded">
+  Title <input type="text" name="title" formControlName="title" />
+  <hr />
+  Body <input type="text" name="body" formControlName="body" />
+  <hr />
+  <input type="hidden" name="id" formControlName="id" />
+  <input type="hidden" name="userId" formControlName="userId" />
+  <button (click)="onPostFormSubmit()" [disabled]="postForm.invalid">
+    Salva
+  </button>
+</form>

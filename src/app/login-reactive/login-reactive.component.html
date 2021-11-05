@@ -1,0 +1,12 @@
+<form [formGroup]="loginForm" *ngIf="!isLogged">
+  Username <input type="text" formControlName="username" />
+  <hr />
+  Password <input type="text" formControlName="password" />
+  <hr />
+  <button (click)="logged()">Login</button>
+</form>
+
+<div *ngIf="isLogged">
+  Hello, you're logged in.
+  <a href="#" target="_self" (click)="logout()">Click here to logout</a>
+</div>

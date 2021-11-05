@@ -1,0 +1,39 @@
+.holder {
+  background: #ecf0f1;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+  margin: 100px auto;
+  padding: 30px 20px 20px;
+  width: 400px;
+}
+
+td {
+  border-bottom: 1px solid #f6f6f6;
+  padding: 5px 10px;
+}
+
+td:nth-child(2) {
+  text-align: right;
+  width: 40px;
+}
+
+tr:last-child td {
+  border: none;
+  padding: 30px 10px 10px;
+  text-align: center;
+}
+
+button {
+  background-color: #2ecc71;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+  padding: 12px 20px 14px;
+}

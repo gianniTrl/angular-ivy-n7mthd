@@ -1,0 +1,9 @@
+<form (submit)="onFormSubmit()">
+  NAME <input type="text" name="username" [(ngModel)]="user.name" />
+  <hr />
+  EMAIL <input type="text" name="useremail" [(ngModel)]="user.email" />
+  <hr />
+  PASSWORD <input type="text" name="userpassword" [(ngModel)]="user.password" />
+  <hr />
+  <input type="submit" value="Register" />
+</form>

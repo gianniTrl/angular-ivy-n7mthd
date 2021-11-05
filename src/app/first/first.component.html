@@ -1,0 +1,14 @@
+<div class="Container">
+  <p class="Container__Title">{{ company }}</p>
+
+  <div class="Container__Button">
+    <button class="Container__Button" (click)="onButtonClick($event)">
+      Change
+    </button>
+  </div>
+
+  <div>
+    <input type="text" name="ceo_name" (keyup)="onKeyUp($event)" />
+    <app-ceo [ceo]="ceoName"></app-ceo>
+  </div>
+</div>
